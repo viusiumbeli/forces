@@ -1,16 +1,18 @@
-package jalg
+package jalg.chapter2
 
 
 fun main() {
-    val arr = intArrayOf(4, 5, 2, 3, 1)
-    quickSort(arr, 0, arr.size - 1)
+    val arr = intArrayOf(10, 9, 8, 7, 6, 5, 4, 3, 2, 1)
+    quickSort(arr, 0, arr.lastIndex)
     println(arr.contentToString())
 }
 
 fun quickSort(arr: IntArray, start: Int, end: Int) {
+    if (start >= end)
+        return
     val partition = partition(arr, start, end)
-    if (partition - 1 > start) quickSort(arr, start, partition - 1)
-    if (partition + 1 < end) quickSort(arr, partition + 1, end)
+    quickSort(arr, start, partition - 1)
+    quickSort(arr, partition + 1, end)
 }
 
 fun partition(arr: IntArray, start: Int, end: Int): Int {

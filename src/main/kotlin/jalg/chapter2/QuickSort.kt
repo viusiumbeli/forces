@@ -1,17 +1,16 @@
-package jalg
+package jalg.chapter2
 
 import java.util.*
 
 fun main() {
-    val sc = Scanner(System.`in`)
-    val n = sc.nextInt()
-    val a = Array(n) { sc.nextInt() }
+    val a = intArrayOf(6, 5, 4, 3, 2, 1)
     sortArray(a, 0, a.lastIndex)
     Arrays.stream(a).forEach { println(it) }
 }
 
-fun sortArray(a: Array<Int>, s: Int, e: Int) {
-    val m = e
+private fun sortArray(a: IntArray, s: Int, e: Int) {
+    if (s > e) return
+    val m = (s + e) / 2
     val pivot = a[m]
     var l = s
     var r = e
@@ -26,7 +25,7 @@ fun sortArray(a: Array<Int>, s: Int, e: Int) {
             r--
         }
     }
-    if (s < r) sortArray(a, s, r)
-    if (l < e) sortArray(a, l, e)
+    sortArray(a, s, r)
+    sortArray(a, l, e)
 }
 //5 4 5 2 1 3
