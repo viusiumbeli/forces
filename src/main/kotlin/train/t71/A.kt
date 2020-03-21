@@ -1,4 +1,4 @@
-package t71
+package train.t71
 
 import java.util.*
 

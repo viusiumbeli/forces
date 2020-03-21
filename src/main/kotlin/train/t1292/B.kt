@@ -1,4 +1,4 @@
-package t1292
+package train.t1292
 
 import java.util.*
 import kotlin.math.abs

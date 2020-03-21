@@ -1,4 +1,4 @@
-package t4
+package train.t4
 
 import java.util.*
 

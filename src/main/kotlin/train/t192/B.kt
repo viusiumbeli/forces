@@ -1,4 +1,4 @@
-package t192
+package train.t192
 
 import java.util.*
 import kotlin.math.max

@@ -1,4 +1,4 @@
-package t791
+package train.t791
 
 import java.util.*
 

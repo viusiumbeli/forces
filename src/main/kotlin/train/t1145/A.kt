@@ -1,4 +1,4 @@
-package t1145
+package train.t1145
 
 import java.util.*
 
