@@ -25,7 +25,7 @@ fun findArray(data: IntArray, start: Int, end: Int, key: Int): Int {
     return -1
 }
 
-fun sortData(data: IntArray, s: Int, e: Int) {
+private fun sortData(data: IntArray, s: Int, e: Int) {
     val mid = (s + e) / 2
     var l = s
     var r = e
